@@ -16,3 +16,10 @@ control "tmp-1.0" do                        # A unique ID for this control
     it { should be_directory }
   end
 end
+
+control 'check_error_logs' do
+  # Check if there are any error logs
+  describe command('grep -i error /var/log/syslog') do
+    its('stdout') { should be_empty }
+  end
+end
