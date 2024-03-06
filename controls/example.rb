@@ -1,5 +1,4 @@
 # copyright: 2018, The Authors
-
 title "sample section"
 
 # you can also use plain tests
