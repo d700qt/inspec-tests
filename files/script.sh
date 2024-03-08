@@ -1,0 +1,1 @@
+ls /root -l | wc -l
