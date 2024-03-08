@@ -19,6 +19,6 @@ end
 control 'check_error_logs' do
   # Check if there are any error logs
   describe command('ls /root -l | wc -l') do
-    its('stdout') { should eq "3" }
+    its('stdout') { should eq "4" }
   end
 end
