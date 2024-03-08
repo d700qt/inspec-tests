@@ -20,5 +20,7 @@ control 'check_error_logs' do
   # Check if there are any error logs
   describe command('files/script.sh') do
     its('stdout') { should eq "2" }
+    it { should exist }
+    it { should be_executable }
   end
 end
