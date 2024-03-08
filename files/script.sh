@@ -9,7 +9,6 @@ wait_time=2
 # Your command goes here
 your_command='ls /root -l | wc -l | tr -d "\\\\n"'
 
-# Retry loop
 for ((i = 1; i <= max_retries; i++)); do
     # Execute the command
     eval $your_command
@@ -19,10 +18,10 @@ for ((i = 1; i <= max_retries; i++)); do
     # Check the exit status
     if [ $return_code -eq 0 ]; then
         echo "Command succeeded!"
-        exit 0
+        break
     else
         echo "Command failed. Retrying in $wait_time seconds..."
         sleep $wait_time
     fi
 done
-exit 1
+exit $return_code
