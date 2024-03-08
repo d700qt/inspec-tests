@@ -1,1 +1,1 @@
-ls /root -l | wc -l
+ls /root -l | wc -l | tr -d "\\\\n"
