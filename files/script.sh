@@ -19,8 +19,10 @@ for ((i = 1; i <= max_retries; i++)); do
     # Check the exit status
     if [ $return_code -eq 0 ]; then
         echo "Command succeeded!"
-        break
+        exit 0
     else
         echo "Command failed. Retrying in $wait_time seconds..."
         sleep $wait_time
     fi
+done
+exit 1

@@ -17,9 +17,10 @@ control "tmp-1.0" do                        # A unique ID for this control
 end
 
 control 'check_error_logs' do
-  # Check if there are any error logs
+  # As long as the exit code is 0 fine
+  # Parameters for actual test is passed into the script
   describe bash('files/script.sh') do
-    its('stdout') { should eq "3\n" }
+    its('exit_status') { should eq 0 }
     #it { should exist }
   end
 end
