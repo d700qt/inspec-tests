@@ -19,7 +19,7 @@ end
 control 'check_error_logs' do
   # Check if there are any error logs
   describe bash('files/script.sh') do
-    its('stdout') { should eq "2" }
+    its('stdout') { should eq "3" }
     #it { should exist }
   end
 end
