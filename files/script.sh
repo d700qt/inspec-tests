@@ -2,7 +2,7 @@
 echo $1
 
 # Set the maximum number of retries
-max_retries=1
+max_retries=$1
 
 # Set the wait time (in seconds) between retries
 wait_time=2
