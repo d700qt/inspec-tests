@@ -5,7 +5,7 @@ inputs:
 - name: max_retries
   description: 'Maximum number of retries'
   required: true
-  value: 2
+  value: 20
 maintainer: The Authors
 copyright: The Authors
 copyright_email: you@example.com
