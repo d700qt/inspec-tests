@@ -8,7 +8,7 @@ max_retries=$1
 wait_time=2
 
 # Your command goes here
-your_command='ls /root -l | wc -l | tr -d "\\\\n"'
+your_command='blah'
 
 for ((i = 1; i <= max_retries; i++)); do
     # Execute the command
