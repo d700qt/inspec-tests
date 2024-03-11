@@ -4,7 +4,6 @@ title: InSpec Profile
 inputs:
 - name: max_retries
   description: 'Maximum number of retries'
-  type: string
   required: true
   value: 2
 maintainer: The Authors
