@@ -7,8 +7,12 @@ max_retries=$1
 # Set the wait time (in seconds) between retries
 wait_time=2
 
-# Your command goes here
-your_command='blah'
+# Command runs the curl command checks the results against
+# - status code (min and max)
+# - contents of the HTTP request body
+# - response headers - content ty[e?
+# Command tries these a number of times with a given wait time
+your_command='ls /root -l | wc -l | tr -d "\\\\n"'
 
 for ((i = 1; i <= max_retries; i++)); do
     # Execute the command

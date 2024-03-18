@@ -6,6 +6,22 @@ inputs:
   description: 'Maximum number of retries'
   required: true
   value: 20
+- name: wait_time_seconds
+  description: 'Wait time in seconds between retries'
+  required: true
+  value: 2
+- name: http_status_min
+  description: 'Lower inclusive bound for HTTP status code'
+  required: true
+  value: 200
+- name: http_status_max
+  description: 'Higher inclusive bound for HTTP status code'
+  required: true
+  value: 299
+- name: http_body_text_pattern
+  description: 'Text to expect in HTTP body'
+  required: true
+  value: '"status":"UP'
 maintainer: The Authors
 copyright: The Authors
 copyright_email: you@example.com
