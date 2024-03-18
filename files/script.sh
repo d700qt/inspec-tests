@@ -29,4 +29,6 @@ for ((i = 1; i <= max_retries; i++)); do
         sleep $wait_time
     fi
 done
+
+# Force error when experimenting with expiries and waivers
 exit $return_code
