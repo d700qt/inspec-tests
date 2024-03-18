@@ -16,7 +16,7 @@ control "tmp-1.0" do                        # A unique ID for this control
   end
 end
 
-control 'bash_retry' do
+control 'bash-retry' do
   # As long as the exit code is 0 fine
   # Parameters for actual test is passed into the script
   describe bash("files/script.sh #{input('max_retries')}") do
