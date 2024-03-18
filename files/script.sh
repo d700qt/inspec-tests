@@ -31,4 +31,5 @@ for ((i = 1; i <= max_retries; i++)); do
 done
 
 # Force error when experimenting with expiries and waivers
-exit $return_code
+#exit $return_code
+exit 1
