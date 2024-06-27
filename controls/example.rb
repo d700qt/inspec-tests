@@ -16,11 +16,11 @@ control "tmp-1.0" do                        # A unique ID for this control
   end
 end
 
-# control 'bash-retry' do
-#   # As long as the exit code is 0 fine
-#   # Parameters for actual test is passed into the script
-#   describe bash("files/script.sh #{input('max_retries')}") do
-#     its('exit_status') { should eq 0 }
-#     #it { should exist }
-#   end
-# end
+control 'bash-retry' do
+  # As long as the exit code is 0 fine
+  # Parameters for actual test is passed into the script
+  describe bash("files/script.sh #{input('max_retries')}") do
+    its('exit_status') { should eq 0 }
+    #it { should exist }
+  end
+end
