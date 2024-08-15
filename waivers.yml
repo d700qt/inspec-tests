@@ -1,4 +1,4 @@
 bash-retry:
-  expiration_date: 2024-10-25
+  expiration_date: 2024-10-22
   justification: "Not needed"
   run: false
